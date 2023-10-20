@@ -1,0 +1,34 @@
+<!-- Unidad3: 
+    19. Se le solicita al usuario que ingrese dos números y un operador (+, -, *, /). Realice un programa para calcular e informar la operación solicitada entre ambos números.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-Ej19 operacion</title>
+</head>
+<body>
+    <h2>SELECCIONAR OPERACION</h2> 
+    
+    <script>      
+        var num1 = prompt("Ingrese un primer numero");
+        num1=Number(num1);
+        var num2 = prompt("Ingrese un segundo numero");
+        num2=Number(num2);
+        var operador = prompt("Ingrese operacion (+, -, *, /)");
+                
+        if(operador=='+') 
+            var calculo=num1+num2;
+        else if(operador=='-')
+            var calculo=num1-num2;
+        else if(operador=='*')
+            var calculo=num1*num2;
+        else if(operador=='/')
+            var calculo=num1/num2;
+
+        alert("El resultado de la operacion es: "+calculo);
+    </script>
+
+</body> 
+</html>

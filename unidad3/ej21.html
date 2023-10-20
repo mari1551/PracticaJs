@@ -1,0 +1,48 @@
+<!-- Unidad3: 
+    21. Realizar un sistema para el cálculo de sueldo de una empresa. Se le solicita al usuario que ingrese la categoría a la que pertenece que define el sueldo básico mensual (categoría 1: u$s 2000, categoría 2: u$s 3000, categoría 3: u$s 4000) y las horas extras. Se sabe que:
+    a. Si es de la categoría 1 y trabajó más de 20 horas extra, suma un bono de u$s 500 más.
+    b. Si es de la categoría 3 y trabajó más de 30 horas extra, suma un bono de u$s 1000 más.
+    Realice un programa para calcular e informar el sueldo mensual del empleado, indicando si su sueldo supera o no los u$s 4000.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-Ej21 SUELDOS X CATEGORIA</title>
+</head>
+<body>
+    <h2>CALCULO DE SUELDOS POR CATEGORIA</h2> 
+    
+    <script>      
+        var categoria = prompt("Ingrese la categoria a la que pertenece 1/2/3");
+        categoria=Number(categoria);
+        var horasE = prompt("Ingrese cantidad de horas extras");
+        horasE=Number(horasE);
+        var salario;
+
+        if(categoria==1){
+            salario=2000;
+            if(horasE>20){
+                salario=salario+500;
+            }
+        } 
+        else if(categoria==2){
+            salario=3000;
+        }
+        else if(categoria==3){
+            salario=3000;
+            if(horasE>30){
+                salario=salario+1000;
+            }
+        }
+       
+        if(salario>4000) msgAdicional="El sueldo supera los u$s 4000";
+        else msgAdicional="El sueldo No supera los u$s 4000";
+        
+        alert("El salario mensual es: "+salario+"\n"+msgAdicional);
+        
+    </script>
+
+</body> 
+</html>

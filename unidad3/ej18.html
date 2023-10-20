@@ -1,0 +1,41 @@
+<!-- Unidad3: 
+    18. Se le solicita al usuario que ingrese los extremos de un rango numérico y un número. Realice un programa para informar si el número está dentro del rango. 
+Si está en rango, informar si el número es par.
+Si no está dentro del rango, informar si es número es impar.
+Tenga en cuenta que el rango debe tener una diferencia mínima de 5 números enteros.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-Ej18 Rango</title>
+</head>
+<body>
+    <h2>RANGO NUMERICO</h2> 
+    
+    <script>      
+        var extremo1 = prompt("Ingrese el primer extremo de un rango numerico");
+        extremo1=Number(extremo1);
+        var extremo2 = prompt("Ingrese el segundo extremo de un rango numerico");
+        extremo2=Number(extremo2);
+       
+        if(extremo2-extremo1<5){
+            alert("Los numeros extremos deben tener 5 enteros de diferencia");
+        }
+        else{
+            var num = prompt("Ingrese un numero");
+            num=Number(num);
+            if(num>extremo1 && num<extremo2){
+                if(num % 2 == 0) alert ("El numero se encuentra dentro del rango y es par");
+                else alert("El numero se encuentra dentro del rango");
+            }
+            else{
+                if(num % 3 == 0) alert ("El numero se encuentra fuera del rango y es impar"); 
+                else alert("El numero se encuentra fuera del rango");
+            } 
+        }              
+    </script>
+
+</body>
+</html>

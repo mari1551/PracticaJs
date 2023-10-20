@@ -1,0 +1,35 @@
+<!-- Unidad2: 
+    14. Realizar un sistema para el cálculo de sueldo de una empresa de seguros. Se le solicita que ingrese el valor de la hora, la cantidad de horas trabajadas en el mes, los años de antigüedad, la cantidad de seguros vendidos y el valor del seguro más caro vendido. Realice un programa para calcular e informar el sueldo mensual del empleado, teniendo en cuenta que se le asigna un bono igual al 50% del seguro más caro vendido, un bono igual al 25% del sueldo por la cantidad de seguros vendidos y otro bono igual al 15% del sueldo por año de antigüedad. Una vez obtenido el sueldo final, calcular e informar el valor promedio de la hora del empleado.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2-Ej14 Empresa de Seguros</title>
+</head>
+<body>
+    <h2>CALCULO DE SUELDOS EN EMPRESA DE SEGUROS</h2> 
+    
+    <script>      
+        var valor = prompt("Ingrese el valor de la hora:");
+        valor=Number(valor);
+        var horas = prompt("Ingrese la cantidad de horas trabajadas en el mes:")
+        horas=Number(horas);
+        var años = prompt("Ingrese los años de antiguedad:")
+        años=Number(años);
+        var cantidad = prompt("Ingrese la cantidad de seguros vendidos:")
+        cantidad=Number(cantidad);
+        var precio = prompt("Ingrese el precio del seguro mas costoso:")
+        precio=Number(precio);
+        var sueldo=valor*horas;
+        var bonoSeguro = precio*0.50;
+        var bonoAños=(sueldo*0.15)*años;        
+        sueldo=sueldo+bonoSeguro+bonoAños;
+        var horaPromedio=sueldo/horas;
+
+        alert("El salario mensual mas bono a pagar es: "+sueldo+"\nEl valor de la hora promedio es: "+horaPromedio);
+    </script>
+
+</body>
+</html>

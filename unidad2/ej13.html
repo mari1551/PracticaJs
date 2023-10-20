@@ -1,0 +1,29 @@
+<!-- Unidad2: 
+    13. Realizar un sistema para el cálculo de sueldos de una empresa. Se le solicita que ingrese el valor de la hora, la cantidad de horas trabajadas en el mes y los años de antigüedad en la empresa. Realice un programa para calcular e informar el sueldo mensual del empleado, teniendo en cuenta que se le asigna un bono mensual igual al 15% del sueldo por año de antigüedad.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2-Ej13 Sueldo + bono</title>
+</head>
+<body>
+    <h2>CALCULO DE SUELDOS MENSUALES</h2> 
+    
+    <script>      
+        var valor = prompt("Ingrese el valor de la hora trabajada:");
+        valor=Number(valor);
+        var horas = prompt("Ingrese la cantidad de horas trabajadas en el mes:")
+        horas=Number(horas);
+        var años = prompt("Ingrese los años de antiguedad:")
+        años=Number(años);
+
+        var sueldo=(valor*horas);
+        sueldo=sueldo+((sueldo*0.15)*años);
+
+        alert("El salario mensual mas bono a pagar es: "+sueldo);
+    </script>
+
+</body>
+</html>
